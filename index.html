@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>Netflix</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <style>
+        body {
+            background-color: #1f1c1c;
+        }
         .card {
             max-width: 150px;
             font-size: 0.7rem;
@@ -24,6 +26,23 @@
             left: 0;
             bottom: 0;
             background-color: red;
+        }
+        footer {
+            font-size: 10px;
+            color: #757575;
+            position: absolute;
+            bottom: 0;
+        }
+        .footer-img-fluid {
+            max-width: 40px;
+            padding-left: 20px;
+        }
+        .h5 {
+            border: 1px solid #757575;
+            display: inline-block;
+        }
+        .ulfooter {
+            list-style: none;
         }
     </style>
 </head>
@@ -87,140 +106,38 @@
             </div>
 
         </div>
+
+        <footer>
+            <div class="row row-cols-4 center">
+                <img class=" footer-img-fluid" src="https://toppng.com/uploads/preview/facebook-f-icon-facebook-logo-png-white-11563016108d1db9g68rk.png" alt="">
+                <img class=" footer-img-fluid" src="data:image/png;base64,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" alt="">
+                <img class=" footer-img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2SW5EZhFlWeyytyonSV6BAu16o22ND1q5dw&usqp=CAU" alt="">
+                <img class=" footer-img-fluid" src="https://logodix.com/logo/395125.png" alt="">
+            </div>
+            <ul class="row ulfooter row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+                <li class="col">Audio and Subtitles</li>
+                <li class="col">Audio Description</li>
+                <li class="col">Help Center</li>
+                <li class="col">Gift Cards</li>
+                <li class="col">Media Center</li>
+                <li class="col">Investor Relations</li>
+                <li class="col">Jobs</li>
+                <li class="col">Terms of Use</li>
+                <li class="col">Privacy</li>
+                <li class="col">Legal Notices</li>
+                <li class="col">Cookie Preferences</li>
+                <li class="col">Corporate Information</li>
+                <li class="col">Contact Us</li>
+
+            </ul>
+            <h5 class="h5">Service Code</h5>
+            <p>1997-2019 Netflix, Inc.</p>
+        </footer>
+
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-=======
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark sticky netflix">
-        <a class="navbar-brand" href="#">
-            <img src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" width="120" alt="">
-        </a>
-        <button class="navbar-toggler m-18" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Tv Shows</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Movies</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Recently Added</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">My List</a>
-              </li>
-          </ul>
-          <img src="https://www.nicepng.com/png/detail/65-659698_search-icon-without-background.png" class="mr-3" width="22" height="22" />
-          <span class="nav-item mr-3">KIDS</span>
-          <img src="https://previews.123rf.com/images/fokaspokas/fokaspokas1803/fokaspokas180300300/96761102-black-bell-icon-white-icon-with-shadow-on-transparent-background.jpg" class="mr-3" width="22" height="22" />
-        <div class="btn-group">
-          <button
-            type="button"
-            class="btn btn-ghost dropdown-toggle"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            <span><img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/1bdc9a33850498.56ba69ac2ba5b.png" height="38" width="38" alt=""></span>
-          </button>
-          <div class="dropdown-menu dropdown-menu-right">
-            <button class="dropdown-item" type="button">Action</button>
-            <button class="dropdown-item" type="button">Another action</button>
-            <button class="dropdown-item" type="button">
-              Something else here
-            </button>
-          </div>
-        </div>
-      </div>
-        </div>
-      </nav> 
-      
-      <!-- Silviu Section  -->
-      
-      <main class="container-fluid pl-5 pr-0">
-        <h4 class="mt-4 text-white">Trending Now</h4>
-        <div
-          class="row no-gutters row-cols-sm-6 mb-4"
-        >
-          <div class="col text-center mb-3 mb-lg-0 px-1">
-            <img class="img-fluid" src="https://d2kektcjb0ajja.cloudfront.net/images/posts/feature_images/000/000/072/large-1466557422-feature.jpg?1466557422" />
-          </div>
-          <div class="col text-center mb-3 mb-lg-0 px-1">
-            <img class="img-fluid" src="https://i.pinimg.com/originals/b1/c9/d6/b1c9d6d8bc1817e909d832de2d496b12.jpg" />
-          </div>
-          <div class="col text-center mb-3 mb-lg-0 px-1">
-            <img class="img-fluid" src="https://images.squarespace-cdn.com/content/v1/507b2f30e4b066e116488db6/1371422223941-DUMGK45O3WQG5CFSSHOT/ke17ZwdGBToddI8pDm48kMCLGa0FeleEm_GkFaWWL4MUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYy7Mythp_T-mtop-vrsUOmeInPi9iDjx9w8K4ZfjXt2dnUbs6BtCV3TtYCsIJCoFx9jDK2X9coSj-O1zSJcJ8s53WUfc_ZsVm9Mi1E6FasEnQ/man-of-steel-poster-wide.jpg" />
-          </div>
-          <div class="col text-center mb-3 mb-lg-0 px-1">
-            <img class="img-fluid" src="https://d2kektcjb0ajja.cloudfront.net/images/posts/feature_images/000/000/072/large-1466557422-feature.jpg?1466557422" />
-          </div>
-          <div class="col text-center mb-3 mb-lg-0 px-1">
-            <img class="img-fluid" src="https://d2kektcjb0ajja.cloudfront.net/images/posts/feature_images/000/000/072/large-1466557422-feature.jpg?1466557422" />
-          </div>
-          <div class="col text-center mb-3 mb-lg-0 px-1">
-            <img class="img-fluid" src="https://d2kektcjb0ajja.cloudfront.net/images/posts/feature_images/000/000/072/large-1466557422-feature.jpg?1466557422" />
-          </div>
-          
-        </div>
-        <img
-          class="prime-logo pl-2 mb-2 mr-2"
-          src="./logo/prime-logo-large-v4._CB509553088_.png"
-        />
-        <h3 class="text-white">Recommended movies</h3>
-        <div
-          class="row no-gutters row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mb-4"
-        >
-          <div class="col text-center mb-3 mb-lg-0 px-1">
-            <img class="img-fluid rounded" src="movies/2-1.jpg" />
-          </div>
-          <div class="col text-center mb-3 mb-lg-0 px-1">
-            <img class="img-fluid rounded" src="movies/2-2.jpg" />
-          </div>
-          <div class="col text-center mb-3 mb-lg-0 px-1">
-            <img class="img-fluid rounded" src="movies/2-3.jpg" />
-          </div>
-          <div class="col text-center mb-3 mb-lg-0 px-1">
-            <img class="img-fluid rounded" src="movies/2-4.jpg" />
-          </div>
-
-        </div>
-        <img
-          class="prime-logo pl-2 mb-2 mr-2"
-          src="./logo/prime-logo-large-v4._CB509553088_.png"
-        />
-        <h3 class="text-white">Recently added movies</h3>
-        <div
-          class="row no-gutters row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mb-4"
-        >
-          <div class="col text-center mb-3 mb-lg-0 px-1">
-            <img class="img-fluid rounded" src="movies/3-1.jpg" />
-          </div>
-          <div class="col text-center mb-3 mb-lg-0 px-1">
-            <img class="img-fluid rounded" src="movies/3-2.jpg" />
-          </div>
-          <div class="col text-center mb-3 mb-lg-0 px-1">
-            <img class="img-fluid rounded" src="movies/3-3.jpg" />
-          </div>
-          <div class="col text-center mb-3 mb-lg-0 px-1">
-            <img class="img-fluid rounded" src="movies/3-4.jpg" />
-          </div>
-        </div>
-      </main>
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
->>>>>>> tranding-now-section
 </body>
 </html>
